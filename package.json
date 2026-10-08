@@ -1,0 +1,11 @@
+{
+  "name": "color-picker-extension",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Chrome extension: eyedropper color picker with WCAG contrast checking.",
+  "scripts": {
+    "test": "node --test && node scripts/validate.mjs",
+    "validate": "node scripts/validate.mjs"
+  },
+  "engines": { "node": ">=20" }
+}

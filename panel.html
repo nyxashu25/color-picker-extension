@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Color Picker</title>
+  <link rel="stylesheet" href="panel.css">
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <h1>Color Picker</h1>
+      <span class="sub">Eyedropper &amp; contrast</span>
+    </header>
+
+    <section class="current" aria-label="Current color">
+      <div id="swatch" class="swatch" role="img" aria-label="Current color preview"></div>
+      <div class="meta">
+        <label class="sr" for="value">Color value</label>
+        <input id="value" class="value" type="text" spellcheck="false" autocomplete="off" maxlength="40"
+               placeholder="#22D3EE, rgb(…), hsl(…) or name">
+        <div id="name" class="name"></div>
+      </div>
+    </section>
+
+    <div class="actions">
+      <button id="pick" class="btn primary" type="button">Pick from screen</button>
+      <label class="btn" for="native">Palette
+        <input id="native" class="native" type="color" aria-label="Choose a color from the palette">
+      </label>
+    </div>
+    <p id="msg" class="msg" role="status" aria-live="polite"></p>
+
+    <section aria-labelledby="h-formats">
+      <h2 id="h-formats">Copy as</h2>
+      <ul id="formats" class="formats"></ul>
+    </section>
+
+    <section aria-labelledby="h-contrast">
+      <h2 id="h-contrast">Contrast (WCAG)</h2>
+      <div id="contrast" class="contrast"></div>
+    </section>
+
+    <section aria-labelledby="h-history">
+      <div class="row">
+        <h2 id="h-history">History</h2>
+        <button id="clear" class="link" type="button">Clear</button>
+      </div>
+      <div id="history" class="history"></div>
+      <p id="empty" class="hint" hidden>Picked colors appear here.</p>
+    </section>
+
+    <label class="toggle">
+      <input id="autoCopy" type="checkbox">
+      <span>Copy to clipboard right after picking</span>
+    </label>
+  </main>
+
+  <script src="lib/color.js"></script>
+  <script src="panel.js"></script>
+</body>
+</html>
