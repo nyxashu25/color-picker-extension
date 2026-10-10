@@ -8,6 +8,7 @@
 ![Chrome](https://img.shields.io/badge/chrome-114%2B-3fb950?style=flat-square&logo=googlechrome&logoColor=white&labelColor=0d1117)
 ![Manifest](https://img.shields.io/badge/manifest-v3-8b949e?style=flat-square&labelColor=0d1117)
 ![Dependencies](https://img.shields.io/badge/dependencies-none-8b949e?style=flat-square&labelColor=0d1117)
+![License](https://img.shields.io/badge/license-MIT-3fb950?style=flat-square&labelColor=0d1117)
 
 </div>
 
@@ -86,3 +87,7 @@ node scripts/validate.mjs # manifest, icon sizes and Manifest V3 CSP rules
 | `test/color.test.js` | Unit tests for the color library |
 | `test/background.test.js` | Runs the real service worker in a sandbox with a stubbed `chrome` API |
 | `scripts/validate.mjs` | Package checks run in CI |
+
+## License
+
+Released under the [MIT License](LICENSE).
